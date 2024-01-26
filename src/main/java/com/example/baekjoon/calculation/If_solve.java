@@ -8,21 +8,23 @@ public class If_solve {
 
         Scanner sc = new Scanner(System.in);
 
-        int H = sc.nextInt();
-        int M = sc.nextInt();
-        int M2 = sc.nextInt();
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
 
-        H += M2 / 60;
-        M += M2 % 60;
-
-        if ( M >= 60 ) {
-            H += 1;
-            M -= 60;
+        if(a == b && b == c) {
+            System.out.println(10000 + a * 1000);
+        } else if(a == b && b != c || a == c && a != b) {
+            System.out.println(1000 + a * 100);
+        } else if(b == c && b != a) {
+            System.out.println(1000 + b * 100);
+        }
+        else {
+            int max = a;
+            if(max < b) max = b;
+            if(max < c) max = c;
+            System.out.println(max * 100);
         }
 
-        if ( H >= 24 ) {
-            H -= 24;
-        }
-        System.out.println(H + " " +  M);
     }
 }
