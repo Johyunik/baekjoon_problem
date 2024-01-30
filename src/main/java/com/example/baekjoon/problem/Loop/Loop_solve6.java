@@ -1,4 +1,4 @@
-package com.example.baekjoon.calculation.Loop;
+package com.example.baekjoon.problem.Loop;
 
 
 import java.io.*;
